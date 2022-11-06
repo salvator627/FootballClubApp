@@ -7,6 +7,9 @@
         <item>Liverpool</item>
         <item>Real Madrid</item>
         <item>Ac Milan</item>
+        <item>Manchester United</item>
+        <item>Manchester City</item>
+        <item>Ajax Amsterdam</item>
     </string-array>
 
     <string-array name="Desc">
@@ -14,6 +17,9 @@
         <item>Premiere League</item>
         <item>La Liga</item>
         <item>Serie A</item>
+        <item>Premiere League</item>
+        <item>Premiere League</item>
+        <item>Erdevise</item>
     </string-array>
 
     <integer-array name="list">
@@ -21,5 +27,8 @@
         <item>@drawable/k</item>
         <item>@drawable/ba</item>
         <item>@drawable/i</item>
+        <item>@drawable/ca</item>
+        <item>@drawable/g</item>
+        <item>@drawable/j</item>
     </integer-array>
 </resources>
