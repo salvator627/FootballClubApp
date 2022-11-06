@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Football Club</string>
+    
+    
+    <string-array name= "Data">
+        <item>Atletico Madrid</item>
+        <item>Liverpool</item>
+        <item>Real Madrid</item>
+        <item>Ac Milan</item>
+    </string-array>
+
+    <string-array name="Desc">
+        <item>La Liga</item>
+        <item>Premiere League</item>
+        <item>La Liga</item>
+        <item>Serie A</item>
+    </string-array>
+
+    <integer-array name="list">
+        <item>@drawable/a</item>
+        <item>@drawable/k</item>
+        <item>@drawable/ba</item>
+        <item>@drawable/i</item>
+    </integer-array>
+</resources>
