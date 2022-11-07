@@ -1,10 +1,13 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.res.TypedArray
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.DetailActivity.Companion.EXTRA_CLUB
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -23,12 +26,32 @@ class MainActivity : AppCompatActivity() {
         binding.rvClub.layoutManager = LinearLayoutManager(this)
         val adapter = Adapter(list)
         binding.rvClub.adapter = adapter
-    }
 
+        //deklarasi adapter to detail
+        adapter.setonItemClickListener(object : Adapter.onItemClickListener{
+            override fun onItemClicked(data: Club) {
+                val clubparcel = Club(
+                    data.name,
+                    data.league,
+                    data.stadium,
+                    data.coach,
+                    data.image
+                )
+                val intent = Intent(this@MainActivity,DetailActivity::class.java)
+                intent.putExtra(EXTRA_CLUB,clubparcel)
+                startActivity(intent)
+            }
+
+        })
+
+    }
+    //show data to recycleview
     @SuppressLint("Recycle")
     private fun getListClub(): ArrayList<Club>{
         val name = resources.getStringArray(R.array.Data)
         val league = resources.getStringArray(R.array.Desc)
+        val stadium = resources.getStringArray(R.array.stadium)
+        val coach = resources.getStringArray(R.array.Coach)
         val image:TypedArray = resources.obtainTypedArray(R.array.list)
 
         val ListClub = ArrayList<Club>()
@@ -36,6 +59,8 @@ class MainActivity : AppCompatActivity() {
             val club = Club(
                 name[i],
                 league[i],
+                stadium[i],
+                coach[i],
                 image.getResourceId(i,-1)
             )
             ListClub.add(club)

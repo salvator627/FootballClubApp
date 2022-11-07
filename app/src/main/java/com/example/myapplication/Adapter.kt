@@ -8,6 +8,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class Adapter(private val list : ArrayList<Club>): RecyclerView.Adapter<Adapter.AdapterViewHolder>() {
+
+    private  var  OnItemClickListener : onItemClickListener? = null
+
+    fun setonItemClickListener(onItemClickListener: onItemClickListener){
+        this.OnItemClickListener = onItemClickListener
+    }
+
     inner class AdapterViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         fun bind(club: Club){
             with(itemView){
@@ -17,6 +24,9 @@ class Adapter(private val list : ArrayList<Club>): RecyclerView.Adapter<Adapter.
                 name.text = club.name
                 league.text = club.league
                 image.setImageResource(club.image)
+                itemView.setOnClickListener {
+                    OnItemClickListener?.onItemClicked(club)
+                }
             }
         }
     }
@@ -31,4 +41,9 @@ class Adapter(private val list : ArrayList<Club>): RecyclerView.Adapter<Adapter.
     }
 
     override fun getItemCount(): Int = list.size
+
+
+    interface onItemClickListener{
+        fun onItemClicked(data: Club)
+    }
 }

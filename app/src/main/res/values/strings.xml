@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Football Club</string>
-    
-    
-    <string-array name= "Data">
+
+
+    <string-array name="Data">
         <item>Atletico Madrid</item>
         <item>Liverpool</item>
         <item>Real Madrid</item>
@@ -31,4 +31,25 @@
         <item>@drawable/g</item>
         <item>@drawable/j</item>
     </integer-array>
+
+
+    <string-array name="stadium">
+        <item>Wanda Metropolitano</item>
+        <item>Anfield</item>
+        <item>Santiago Bernabeu</item>
+        <item>San Siro</item>
+        <item>Old Traffold</item>
+        <item>Etihad Stadium</item>
+        <item>Gak Tau Saya</item>
+    </string-array>
+
+    <string-array name="Coach">
+        <item>Diego Simeone</item>
+        <item>Jurgen Kloop</item>
+        <item>Carlo Ancelotti</item>
+        <item>Zlatan Ibrahimovic</item>
+        <item>Ten Haag</item>
+        <item>Pep Guardiola</item>
+        <item>Ga Tau Cuk</item>
+    </string-array>
 </resources>
