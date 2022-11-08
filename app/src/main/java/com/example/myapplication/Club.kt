@@ -9,5 +9,6 @@ data class Club (
     val league : String,
     val stadium: String,
     val coach : String,
+    val banner : Int,
     val image : Int
 ):Parcelable

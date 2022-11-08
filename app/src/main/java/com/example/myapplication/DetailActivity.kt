@@ -22,6 +22,7 @@ class DetailActivity : AppCompatActivity() {
         binding.leaguedetail.text = intent?.league
         binding.tvStadium.text = intent?.stadium
         binding.textView2.text = intent?.coach
+        binding.banner.setImageResource(intent?.banner!!)
         binding.imageView2.setImageResource(intent?.image!!)
     }
 }

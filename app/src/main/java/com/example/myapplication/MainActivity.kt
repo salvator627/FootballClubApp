@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                     data.league,
                     data.stadium,
                     data.coach,
+                    data.banner,
                     data.image
                 )
                 val intent = Intent(this@MainActivity,DetailActivity::class.java)
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         val league = resources.getStringArray(R.array.Desc)
         val stadium = resources.getStringArray(R.array.stadium)
         val coach = resources.getStringArray(R.array.Coach)
+        val banner = resources.obtainTypedArray(R.array.banner)
         val image:TypedArray = resources.obtainTypedArray(R.array.list)
 
         val ListClub = ArrayList<Club>()
@@ -61,6 +63,7 @@ class MainActivity : AppCompatActivity() {
                 league[i],
                 stadium[i],
                 coach[i],
+                banner.getResourceId(i, -1),
                 image.getResourceId(i,-1)
             )
             ListClub.add(club)

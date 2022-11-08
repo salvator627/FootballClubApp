@@ -32,6 +32,15 @@
         <item>@drawable/j</item>
     </integer-array>
 
+    <integer-array name="banner">
+        <item>@drawable/wandametropolitano</item>
+        <item>@drawable/anfield</item>
+        <item>@drawable/santiago</item>
+        <item>@drawable/sansiro</item>
+        <item>@drawable/oldtrafford</item>
+        <item>@drawable/etihadstadium</item>
+        <item>@drawable/johan</item>
+    </integer-array>
 
     <string-array name="stadium">
         <item>Wanda Metropolitano</item>
@@ -40,7 +49,7 @@
         <item>San Siro</item>
         <item>Old Traffold</item>
         <item>Etihad Stadium</item>
-        <item>Gak Tau Saya</item>
+        <item>Johan Cruyff Arena</item>
     </string-array>
 
     <string-array name="Coach">
@@ -50,6 +59,6 @@
         <item>Zlatan Ibrahimovic</item>
         <item>Ten Haag</item>
         <item>Pep Guardiola</item>
-        <item>Ga Tau Cuk</item>
+        <item>Schreuder</item>
     </string-array>
 </resources>
